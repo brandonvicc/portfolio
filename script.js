@@ -17,32 +17,32 @@ hamburger.addEventListener('click', ()=>{
 })
 
 
-const sections = document.querySelectorAll('section');
-const options= {
-    threshold: 1
-};
+// const sections = document.querySelectorAll('section');
+// const options= {
+//     threshold: 1
+// };
 
-const observer = new IntersectionObserver(function(entries,observer){
-    entries.forEach(entry =>{
-        if(entry.isIntersecting){
-            let currentActive = document.querySelector("a.active")
-            if(currentActive){
-                currentActive.classList.remove('active');
-            }
+// const observer = new IntersectionObserver(function(entries,observer){
+//     entries.forEach(entry =>{
+//         if(entry.isIntersecting){
+//             let currentActive = document.querySelector("a.active")
+//             if(currentActive){
+//                 currentActive.classList.remove('active');
+//             }
             
-            let newActive = document.querySelector(`a[href="#${entry.target.getAttribute('id')}"]`)
-            if(newActive !== null){
-                newActive.classList.add('active')
-            }
-        };
+//             let newActive = document.querySelector(`a[href="#${entry.target.getAttribute('id')}"]`)
+//             if(newActive !== null){
+//                 newActive.classList.add('active')
+//             }
+//         };
 
-    })
+//     })
     
-}, options)
+// }, options)
 
-sections.forEach(section=>{
-    observer.observe(section)
-});
+// sections.forEach(section=>{
+//     observer.observe(section)
+// });
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
