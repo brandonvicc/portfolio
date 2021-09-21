@@ -422,7 +422,7 @@ html{
 
 @media (max-width: 450px){
     .footer-icons{
-        justify-content: center;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         text-align: center;
     }
