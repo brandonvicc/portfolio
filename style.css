@@ -254,11 +254,12 @@ html{
     padding-top: 15px;
     margin-top: 100px;
     border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,.3);
 }
 
 .work-box h3{
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
 }
 
