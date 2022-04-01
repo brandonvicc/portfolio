@@ -11,7 +11,14 @@ html{
 .heading{
     font-family: "Montserrat", sans-serif;
     font-size: 3rem;
+    padding-top: 20px;
     font-weight: 900;
+}
+
+.main-heading{
+    font-family: "Montserrat", sans-serif;
+    font-size: 5rem;
+    padding-top: 50px;
 }
 
 /* navbar */
@@ -27,6 +34,10 @@ html{
 
 .logo{
     width: 100px;
+}
+
+.nav-links{
+    padding-right: 50px;
 }
 
 .nav-links ul{
@@ -62,7 +73,7 @@ html{
 .sticky {
     position: fixed;
     top: 0;
-    width: 96vw;
+    width: 98vw;
     /* padding-right: 100px; */
 }
 
@@ -76,7 +87,7 @@ html{
     background-image: url('./assets/hero-bg.png');
     min-width: 350px;
     /* width: 100%; */
-    height: 90vh;
+    height: 105vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -213,6 +224,19 @@ html{
     text-align: center;
 }
 
+.postgres-icon-container{
+    margin: 25px 10px;
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.postgres-icon{
+    max-width: 95px;
+}
+
 
 /* Work */
 #work .heading{
@@ -248,14 +272,17 @@ html{
 .work-img-container img{
     width: 100%;
     max-height: 660px;
+    min-height: 300px;
+
     
 }
 
 .work-icons{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .work-icons i{
@@ -265,18 +292,32 @@ html{
     margin-bottom: 10px;
 }
 
+.postgres-work-icon-container{
+    margin-bottom: 10px;
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.postgres-work-icon{
+    max-width: 50px;
+}
+
+
 
 .work-context{
     padding: 25px;
     font-size: 1.2rem;
-    line-height: 3em
+    line-height: 2.5em
 }
 
 .view{
     position: absolute;
     top: 0px;
     width: 100%;
-    height: 100%;
+    height: 98%;
     background-color: rgba(0,0,0,.7);
     z-index: 1;
     transform: scaleY(0);
@@ -284,6 +325,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .work-img-container:hover .view{
@@ -312,6 +354,7 @@ html{
 #contact{
     margin: 100px auto 0px auto;
     background-color: var(--blue);
+    padding-bottom: 40px;
 }
 
 #contact h1{
@@ -353,12 +396,13 @@ html{
     margin: 10px 10%;
     padding: 5px;
     font-size: 1.1rem;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,.3);
 }
 
 .submit-btn{
     box-shadow: none;
     padding: 13px 20px;
-    width: 80%;
+    width: 81%;
     border: 2px solid #000000;
     background-color: #fff;
     color: #000000;
@@ -374,7 +418,7 @@ html{
 
 #footer{
     margin-top: -30px;
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(129, 129, 129);
     padding: 25px;
 }
 
@@ -398,8 +442,16 @@ html{
 }
 
 .footer-icons i:hover{
-    color: #fff;
+    color: var(--blue);
     cursor: pointer;
+}
+
+
+.footer-angel-icon{
+    width: 45px;
+}
+.footer-angel-icon:hover{
+    fill: var(--blue);
 }
 
 
@@ -415,7 +467,7 @@ html{
 
 @media (max-width: 425px){
     #hero{
-        height: 100vh;
+        height: 105vh;
     }
 }
 
@@ -461,8 +513,17 @@ html{
         display: flex;
     }
 
+    #hero{
+        height: 150vh;
+    }
+
     .heading{
         text-align: center;
+        font-size: 2rem;
+    }
+
+    .main-heading{
+        font-size: 3rem;
     }
     
 }
@@ -522,6 +583,7 @@ html{
     .work-content{
         padding-left: 20px;
         display: flex;
+        align-items: flex-start;
     }
 
     .work-context{
@@ -571,7 +633,7 @@ html{
 
     .about-context{
         padding: 30px;
-        line-height: 70px;
+        line-height: 60px;
         font-size: 1.1rem;
     }
 

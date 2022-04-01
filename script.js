@@ -1,21 +1,20 @@
 // navbar logic
 
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementsByClassName('nav-links')[0];
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementsByClassName("nav-links")[0];
 var isOpen = true;
-hamburger.addEventListener('click', ()=>{
-    navLinks.classList.toggle('active');
-    if(isOpen){
-        hamburger.classList.remove('fa-bars');
-        hamburger.classList.add('fa-times');
-        isOpen= !isOpen;
-    }else{
-        hamburger.classList.remove('fa-times');
-        hamburger.classList.add('fa-bars');
-        isOpen= !isOpen;
-    }
-})
-
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  if (isOpen) {
+    hamburger.classList.remove("fa-bars");
+    hamburger.classList.add("fa-times");
+    isOpen = !isOpen;
+  } else {
+    hamburger.classList.remove("fa-times");
+    hamburger.classList.add("fa-bars");
+    isOpen = !isOpen;
+  }
+});
 
 // const sections = document.querySelectorAll('section');
 // const options= {
@@ -29,7 +28,7 @@ hamburger.addEventListener('click', ()=>{
 //             if(currentActive){
 //                 currentActive.classList.remove('active');
 //             }
-            
+
 //             let newActive = document.querySelector(`a[href="#${entry.target.getAttribute('id')}"]`)
 //             if(newActive !== null){
 //                 newActive.classList.add('active')
@@ -37,7 +36,7 @@ hamburger.addEventListener('click', ()=>{
 //         };
 
 //     })
-    
+
 // }, options)
 
 // sections.forEach(section=>{
@@ -45,7 +44,9 @@ hamburger.addEventListener('click', ()=>{
 // });
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+window.onscroll = function () {
+  myFunction();
+};
 
 // Get the header
 var navbar = document.getElementById("navbar");
@@ -55,9 +56,9 @@ var sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
-    if (window.pageYOffset > sticky) {
-        navbar.classList.add("sticky");
-    } else {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky");
+  } else {
     navbar.classList.remove("sticky");
-    }
+  }
 }
